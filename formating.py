@@ -1,2 +1,1 @@
-.project
-*.pyc
+#this file is to get familiar with python formating rules
