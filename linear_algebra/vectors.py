@@ -39,9 +39,3 @@ def squared_distance(u, v):
 
 def distance(u, v):
 	return math.sqrt(squared_distance(u, v))
-
-
-a = [1, 2, 3]
-b = [4, 5, 6]
-print(distance(a, b))
-print(vector_mean([a, b]))
