@@ -6,6 +6,9 @@ from functools import reduce
 import matplotlib.pyplot as plt 
 import math
 
+import random
+from collections import Counter
+
 def uniform_pdf(x):
 	return 1 if x >= 0 and x < 1 else 0
 
@@ -59,4 +62,14 @@ def normal_cdf_inverse(p, mu=0, sigma=1, tolerence=0.00001):
 			z_max = z_mid
 		else:
 			z_min = z_mid
+
+
+## Bunomials and bernoulli distribution
+
+def bernoulli_trial(p):
+	return 1 if random.random() < p else 0
+
+
+def binomial(n, p):
+	return sum([bernoulli_trial(p) for _ in range(n)])
 

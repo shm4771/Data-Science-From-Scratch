@@ -11,5 +11,3 @@ def covariance(x, y):
 
 def correlation(x, y):
 	return covariance(x, y) / (dm.std_deviation(x) * dm.std_deviation(y))
-
-print(correlation([1, 3], [2, 6])) 

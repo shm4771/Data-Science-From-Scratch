@@ -1,5 +1,7 @@
 #This is the example to simulate conditional probability 
 
+######Note:- library locations has been changed, will be upadted soon ----
+
 #problem_1: given elder kid is girl, probability that both kids are girls
 #problem_2: given that atleast one kid is girl, probability that both kids are girls
 

@@ -26,4 +26,4 @@ def make_hist(p, n, num_points):
 	plt.show()
 
 
-make_hist(0.4, 10, 1000)
+#make_hist(0.4, 10, 1000)
