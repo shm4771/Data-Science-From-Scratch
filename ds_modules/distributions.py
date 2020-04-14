@@ -30,7 +30,6 @@ plt.show()
 
 def normal_pdf(x, mu=0, sigma=1):
 	sqrt_two_pi = (math.sqrt(2 * math.pi)) 
-
 	return math.exp(- (x-mu) **2 / (2 * sigma **2)) / (sqrt_two_pi * sigma)
 
 def normal_cdf(x, mu=0, sigma=1):
@@ -47,21 +46,22 @@ plt.axis([-6, 6, 0, 1])
 plt.show()
 """
 
-def normal_cdf_inverse(p, mu=0, sigma=1, tolerence=0.00001):
+def normal_cdf_inverse(p, mu=0, sigma=1, tolerence=0.0001):
 	""" we will use binary search for find the point X for which cumulative probability is known """
 	z_min, z_max = -10, 10
 	#p_min, p_max = normal_cdf(-10), normal_cdf(10)
 
 	error = 10
-	while error > tolerence:
+	while abs(error) > tolerence:
 		z_mid = (z_min + z_max)/2 
-		error = abs(normal_cdf(z_mid) - p)
+		error = normal_cdf(z_mid) - p
 		if abs(error) <= tolerence:
-			return mu + sigma * z_mid
+			return mu + (sigma * z_mid)
 		elif error > 0:
 			z_max = z_mid
 		else:
 			z_min = z_mid
+
 
 
 ## Bunomials and bernoulli distribution
@@ -73,3 +73,5 @@ def bernoulli_trial(p):
 def binomial(n, p):
 	return sum([bernoulli_trial(p) for _ in range(n)])
 
+
+#print(normal_cdf_inverse(0.4, 7, 3))
