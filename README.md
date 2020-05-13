@@ -10,3 +10,9 @@ Distributions -> functions to perform bernoulli, binomial, normal distribution c
 Gradient -> Functions to perform batch and stochatic gradient on a error function  
 vectors -> Functions for vector algebra operations  
 Materices -> Functions for matrice algebra operations  
+
+
+Src Files
+---
+Hypothesis Testing -> performs A/B testing
+Visualizations ->  data plotting of various type
