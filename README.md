@@ -14,5 +14,5 @@ Materices -> Functions for matrice algebra operations
 
 Src Files
 ---
-Hypothesis Testing -> performs A/B testing
-Visualizations ->  data plotting of various type
+Hypothesis Testing -> performs A/B testing  
+Visualizations ->  data plotting of various type  
